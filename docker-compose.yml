@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+    dotnet:
+        ports:
+            - '8000:80'
+        container_name: aspnetcore_sample
+        image: 'mcr.microsoft.com/dotnet/core/samples:aspnetapp'
