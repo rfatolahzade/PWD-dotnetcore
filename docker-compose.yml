@@ -1,7 +1,8 @@
-version: '3.3'
 services:
-    dotnet:
-        ports:
-            - '8000:80'
-        container_name: aspnetcore_sample
-        image: 'mcr.microsoft.com/dotnet/core/samples:aspnetapp'
+  nginx:
+    image: nginx:alpine
+    container_name: simple_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
